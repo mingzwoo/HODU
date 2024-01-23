@@ -1,0 +1,811 @@
+/*
+가변 글꼴로 적용
+*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Pretendard";
+    font-weight: 400;
+    color: #000;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* 로딩 이미지 스타일 */
+#loading {
+    display: none; /* 기본적으로 로딩 이미지를 숨김 */
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* PC 버전 */
+@media screen and (min-width: 1280px) {
+    button.bg-primary {
+        background: #d97652;
+        color: #fff;
+        height: 50px;
+        padding: 0 30px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .w1280 {
+        width: 1280px;
+        margin: 0 auto;
+    }
+
+    .header {
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+        width: 1280px;
+        height: 102px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header h1 {
+        width: 130px;
+    }
+    .header h1 img {
+        width: 100%;
+    }
+
+    .nav {
+        width: 50%;
+    }
+    .nav ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+    }
+
+    .container {
+        position: relative;
+        padding-bottom: 240px;
+    }
+
+    .container .bg {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 340px;
+        background: url("./image/bg.png") no-repeat center center;
+        background-size: cover;
+    }
+    .visual {
+        height: 900px;
+        background: #f2e9d8;
+    }
+    .visual .inner {
+        position: relative;
+        height: 100%;
+        background: url("./image/box.png") no-repeat right bottom;
+    }
+
+    .visual .inner .hero {
+        position: absolute;
+        left: 0;
+        top: 300px;
+    }
+
+    .visual .inner .hero h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+
+    .visual .inner .hero p {
+        line-height: 20px;
+        margin: 40px 0;
+    }
+
+    .con_01 {
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+    }
+    .con_01 .photo {
+        width: 660px;
+    }
+
+    .con_01 .photo img {
+        border-radius: 30px;
+        box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .con_01 dl {
+        margin-left: 110px;
+    }
+
+    .con_01 dl dt {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    .con_01 dl dd {
+        margin-top: 40px;
+    }
+
+    .con_02 h2 {
+        color: #d97652;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 60px;
+        margin-bottom: 40px;
+    }
+
+    .con_02 p.desc {
+        margin-bottom: 38px;
+        text-align: center;
+    }
+
+    .con_02 p.desc strong {
+        color: #d97652;
+        font-weight: 700;
+    }
+
+    .con_02 ul {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 72px;
+        overflow: hidden;
+        padding: 50px 0 100px 0;
+    }
+
+    .con_02 ul li {
+        width: 378px;
+        height: 378px;
+    }
+    .con_02 ul li img {
+        width: 100%;
+        border-radius: 30px;
+        box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .con_02 .btn-set {
+        position: relative;
+        text-align: center;
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 80px;
+    }
+    .con_02 .btn-set p {
+        font-weight: 700;
+        padding-bottom: 30px;
+    }
+    .scrollstop_btn{
+        display: none;
+        position: absolute;
+        top: -300px;
+        right: -100px;
+        cursor: pointer;
+        background: #d97652;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .con_03 {
+        padding: 68px 0 0 0;
+    }
+    .con_03 h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+    .con_03 p {
+        color: #606367;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 50px;
+    }
+    .con_03 .map {
+        height: 572px;
+        background: #ddd;
+        border-radius: 20px;
+    }
+
+    .con_04 {
+        margin-top: 80px;
+        background: #263140;
+        border-radius: 30px;
+    }
+
+    .con_04 .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 58px;
+    }
+    .con_04 h2 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .con_04 p {
+        color: #f2e9d8;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .con_04 .email {
+        position: relative;
+    }
+
+    .con_04 .email::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url("./image/icon_mail.png") no-repeat right bottom;
+        background-size: cover;
+        position: absolute;
+        left: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .con_04 .email input {
+        width: 462px;
+        background: #fff;
+        border-radius: 60px;
+        border: none;
+        height: 60px;
+        padding-left: 68px;
+    }
+
+    .con_04 .email button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    .footer {
+        height: 160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer ul {
+        width: 228px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer ul li a {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f29d52;
+        border-radius: 50px;
+    }
+
+    .btn-top {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #c4c4c4;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .btn-top svg path {
+        fill: #c4c4c4;
+        transition: fill 0.3s;
+    }
+    .btn-top:hover svg path {
+        fill: #767676;
+    }
+
+    /* 모달 */
+    #modal {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    #modal .modal_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 30px;
+        background: url("./image/pop.png") no-repeat;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    #modal .cheer {
+        text-align: center;
+    }
+
+    #modal .cheer h1 {
+        color: #d97652;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    #modal .cheer h2 {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 12px 0 38px 0;
+    }
+
+    #modal .cat_img {
+        width: 110px;
+        margin-bottom: 24px;
+    }
+
+    #modal .close_btn {
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .footer ul.foot_nav,
+    .btn_close,
+    .btn_mobile {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/* 모바일 버전 */
+@media screen and (max-width: 1279px) {
+    img { width: 100%;}
+
+    html,body {
+        min-width: 390px;
+        overflow-x: hidden;
+    }
+    body {
+        line-height: 18px;
+        font-size: 14px;
+    }
+
+    button.bg-primary {
+        background: #d97652;
+        color: #fff;
+        height: 40px;
+        padding: 0 24px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+
+
+    .header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 94%;
+        height: 76px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3%;
+    }
+    .header h1 {
+        width: 92px;
+        padding-left: 10px;
+    }
+
+    .nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: right 0.3s ease-out;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav .inner {
+        position: absolute;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background: #263140;
+    }
+
+    .nav .btn_close {
+        margin: 22px 0 0 20px;
+    }
+
+    .nav ul {
+        margin-top: 60px;
+        margin-left: 50px;
+    }
+
+    .nav ul li {
+        margin-bottom: 30px;
+    }
+
+    .nav ul li:last-child {
+        margin-top: 50px;
+        margin-left: -10px;
+    }
+
+    .nav ul li a {
+        display: block;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .container {
+        position: relative;
+        padding-bottom: 172px;
+    }
+
+    .container .bg {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 240px;
+        background: url("./image/pop.png") no-repeat center center;
+        background-size: cover;
+    }
+    .visual {
+        height: 800px;
+        background: #f2e9d8;
+        text-align: center;
+    }
+    .visual .inner {
+        position: relative;
+        height: 100%;
+        background: url("./image/cat.png") no-repeat center bottom;
+        background-size: 197px 422px;
+
+    }
+
+    .visual .inner .hero {
+        width: calc(100% - 64px);
+        position: absolute;
+        left: 0;
+        top: 116px;
+        padding: 0 32px;
+    }
+
+    .visual .inner .hero h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .visual .inner .hero p {
+        line-height: 18px;
+        margin: 30px 0;
+    }
+
+    .con_01 {
+        padding: 32px 32px 60px 32px;
+    }
+
+
+    .con_01 .photo img {
+        border-radius: 18px;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .con_01 dl dt {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-top: 40px;
+    }
+
+    .con_01 dl dd {
+        margin-top: 20px;
+        line-height: 18px;
+    }
+
+    .con_02 {
+        padding: 0 32px;
+    }
+
+    .con_02 h2 {
+        color: #d97652;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .con_02 p.desc {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .con_02 p.desc strong {
+        color: #d97652;
+        font-weight: 700;
+    }
+
+    .con_02 ul {
+        gap: 32px;
+        padding: 40px 0 30px 0;
+    }
+
+    .con_02 ul li {
+        margin-bottom: 32px;
+
+    }
+    .con_02 ul li img {
+        border-radius: 18px;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .con_02 .btn-set {
+        position: relative;
+        text-align: center;
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 60px;
+        line-height: 24px;
+    }
+    .con_02 .btn-set p {
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 28px;
+    }
+    .scrollstop_btn {
+        display: none;
+        position: absolute;
+        top: -55px;
+        right: 0px;
+        cursor: pointer;
+        background: #d97652;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .con_03 {
+        padding: 40px 32px 32px 32px;
+    }
+    .con_03 h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+    .con_03 p {
+        font-size: 16px;
+        color: #606367;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .con_03 .map {
+        height: 150px;
+        background: #ddd;
+        border-radius: 20px;
+    }
+
+    .con_04 {
+        margin-top: 35px;
+        background: #263140;
+        border-radius: 18px;
+        margin: 0 32px;
+
+    }
+
+    .con_04 .inner {
+        padding: 36px 32px;
+    }
+    .con_04 h2 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .con_04 p {
+        color: #f2e9d8;
+        font-size: 14px;
+        margin: 20px 0 30px 0;
+    }
+
+    .con_04 .email {
+        position: relative;
+        text-align: right;
+    }
+
+    .con_04 .email ::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: url("./image/icon_mail.png") no-repeat right bottom;
+        background-size: cover;
+        position: absolute;
+        left: 18px;
+        top:12px;
+    }
+
+    .con_04 .email input {
+        width: calc(100% - 48px);
+        background: #fff;
+        border-radius: 60px;
+        border: none;
+        height: 40px;
+        margin-bottom: 20px;
+        padding-left: 48px;
+    }
+
+    .footer {
+        position: relative;
+        padding: 30px 20px;
+    }
+
+    .footer .foot-logo {
+        width: 112px;
+    }
+
+    .footer ul.sns {
+        width: 176px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .footer ul.sns li a {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f29d52;
+        border-radius: 50px;
+    }
+    .footer ul li a img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer ul.foot_nav {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+    .footer ul.foot_nav li a {
+        color: #767676;
+        font-size: 14px;
+    }
+
+
+    .btn-top {
+        display: none;
+    }
+
+
+    /* 모달 */
+    #modal {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    #modal .modal_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 30px;
+        background: url("./image/pop.png") no-repeat;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    #modal .cheer {
+        text-align: center;
+    }
+
+    #modal .cheer h1 {
+        color: #d97652;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    #modal .cheer h2 {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 10px 0 28px 0;
+    }
+
+    #modal .cat_img {
+        width: 60px;
+        margin-bottom: 24px;
+    }
+
+    #modal .close_btn {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 18px;
+    }
+
+}
